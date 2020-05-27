@@ -79,7 +79,7 @@
 }
 
 .demo__lesson---large img {
-  width: 478px;
+  width: 448px;
   border-radius: 20px;
   box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
 }
@@ -91,7 +91,7 @@
 }
 
 .demo__col .demo__lesson---small:nth-child(2) {
-    margin-top: 110px;
+    margin-top: 60px;
 }
 
 .demo__col:nth-child(1) .demo__lesson---small:nth-child(2) {

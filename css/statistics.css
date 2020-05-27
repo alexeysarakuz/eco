@@ -1,0 +1,27 @@
+.statistics-section {
+    background-color: #8B55A0;
+    height: 100vh;
+}
+
+.statistics__sliding{
+    width: 300vw;
+    display: flex;
+    align-items: center;
+}
+
+.slider-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.statistics__sliding .slide {
+    width: 90vw;
+    min-height: 30px;
+    background-color: red;
+    margin: 10px 0;
+}
+
+.statistics__sliding .slide:nth-child(2) {
+
+    background-color: green;
+}

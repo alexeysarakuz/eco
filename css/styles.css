@@ -1,5 +1,10 @@
 @import "./demo.css";
 @import "./reset.css";
+@import "./statistics.css";
+
+.temporary-hidden {
+  /* display: none; */
+}
 
 nav {
   position: relative;
@@ -127,6 +132,10 @@ nav {
   position: relative;
 }
 
+.nav__list li:nth-child(5) a img:hover {
+  transform: scale(1.3);
+}
+
 .nav__list li:nth-child(5)::after {
   content: "";
   top: -26px;
@@ -187,7 +196,7 @@ nav {
 
 .heading__title {
   width: 705px;
-  margin-top: 32vh;
+  margin-top: 28vh;
   margin-bottom: 77px;
 }
 
@@ -315,7 +324,7 @@ nav {
 }
 
 .quote__title {
-  margin-top: 62px;
+  margin-top: 22px;
   font-family: "Montserrat Alternates";
   font-weight: bold;
   font-size: 40px;
@@ -357,6 +366,86 @@ nav {
   justify-content: center;
   font-family: "Montserrat Alternates";
   margin-top: 17px;
+}
+
+.quotes__content-total {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.if__content-total {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  padding-bottom: 130px;
+}
+
+.quotes__content-total.swap {
+  animation: fadeOut .6s 1 forwards;
+}
+
+.if__content-total.swap {
+  opacity: 1;
+  animation: fadeIn .6s 1 forwards;
+}
+
+.quotes__content-total.swap-back {
+  animation: fadeOut1 .9s 1 forwards;
+}
+
+.if__content-total.swap-back {
+  animation: fadeIn1 .9s 1 forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) translateX(-50%);
+  }
+}
+
+@keyframes fadeOut1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 }
 
 .quotes__item {
@@ -450,8 +539,8 @@ nav {
 }
 
 .quotes__figure1 {
-  left: 80.15px;
-  top: 348.91px;
+  left: 70.15px;
+  top: 318.91px;
 }
 
 .quotes__figure1 img {
@@ -459,8 +548,8 @@ nav {
 }
 
 .quotes__figure2 {
-  left: 169.15px;
-  top: 385.91px;
+  left: 160.15px;
+  top: 355.91px;
 }
 
 .quotes__figure2 img {
@@ -468,8 +557,38 @@ nav {
 }
 
 .quotes__figure4 {
-  right: 46px;
-  bottom: 37px;
+  right: 57.5px;
+  bottom: 30px;
+  /* width: 40px; */
+  /* height: 60px; */
+  padding: 10px;
+  transform: rotate(0);
+}
+
+.quotes__figure4 img {
+  animation: rotateABit41 1s infinite forwards linear;
+}
+
+/* .quotes__figure4:hover img {
+  animation: rotateABit41 1s infinite forwards linear;
+} */
+
+@keyframes rotateABit41 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  33% {
+    transform: translateY(20px);
+  }
+
+  66% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .quotes__figure4 img {
@@ -587,6 +706,12 @@ nav {
 .team__content-right-lesson-person {
   padding: 0;
   margin: 0;
+}
+
+.team__content-left,
+.team__content-right {
+  position: relative;
+  z-index: 30;
 }
 
 .team__content-left {
@@ -846,7 +971,7 @@ nav {
 
 .whatis__title {
   width: 497px;
-  margin-top: 13vh;
+  margin-top: 8vh;
   margin-right: 27px;
   margin-bottom: 45px;
 }
@@ -901,7 +1026,7 @@ nav {
 }
 
 .faq__title {
-  margin: 16.25vh 0 8.37vh 103px;
+  margin: 14vh 0 7vh 103px;
   width: 476px;
   position: relative;
   z-index: 20;
@@ -1051,13 +1176,13 @@ nav {
 }
 
 .formats__content-info {
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
   font-weight: normal;
   color: #333333;
 }
 
 .formats__content-advice {
-  margin: 0 auto 71px;
+  margin: 0 auto 31px;
   font-weight: 500;
   color: #57a080;
 }
@@ -1167,7 +1292,7 @@ nav {
 .formats__content-box-header {
   background: #dfdfdf;
   border-radius: 20px 20px 30px 0px;
-  height: 75px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1330,7 +1455,7 @@ nav {
   left: 30px;
   z-index: 30;
   opacity: 0;
-  transition: .3s .3s;
+  transition: 0.3s 0.3s;
 }
 
 .formats__heart2 {
@@ -1342,7 +1467,7 @@ nav {
   left: 53px;
   z-index: 30;
   opacity: 0;
-  transition: .3s .2s;
+  transition: 0.3s 0.2s;
 }
 
 .formats__heart3 {
@@ -1354,5 +1479,9 @@ nav {
   left: 14px;
   z-index: 30;
   opacity: 0;
-  transition: .3s .1s;
+  transition: 0.3s 0.1s;
+}
+
+.slider__indicators {
+  display: none;
 }
