@@ -1,0 +1,181 @@
+.demo-section {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 90px;
+  overflow: hidden;
+  background-color: rgba(241, 200, 223, 0.34);
+  font-family: "Montserrat Alternates";
+}
+
+.demo-section img {
+  display: block;
+}
+
+.demo-container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.demo__title img {
+  display: block;
+  position: relative;
+  z-index: 40;
+  width: 410px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.demo__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 30;
+}
+
+.demo__spot {
+  position: absolute;
+}
+
+.demo__spot1 {
+  width: 830px;
+  height: 745px;
+  left: -61px;
+  bottom: -110px;
+}
+
+.demo__spot1 img {
+  display: block;
+  width: 100%;
+}
+
+.demo__spot2 {
+  position: absolute;
+  width: 394px;
+  height: 288.4px;
+  left: 50%;
+  bottom: -142px;
+  transform: translateX(-50%);
+  background-image: url("../img/demo-section/spot2.png");
+  background-size: cover;
+}
+
+.demo__spot2 img {
+  display: block;
+  width: 118px;
+  margin: 0 auto;
+  margin-top: 43px;
+  margin-bottom: 15px;
+}
+
+.demo__spot2 p {
+  width: 330px;
+  margin: 0 auto;
+  padding-left: 13px;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.demo__lesson---large img {
+  width: 478px;
+  border-radius: 20px;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.demo__lesson---small img {
+    width: 225px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.demo__col .demo__lesson---small:nth-child(2) {
+    margin-top: 110px;
+}
+
+.demo__col:nth-child(1) .demo__lesson---small:nth-child(2) {
+    margin-left: 56px;
+}
+
+.demo__col:nth-child(3) .demo__lesson---small:nth-child(1) {
+    margin-left: 56px;
+}
+
+.demo__col:nth-child(3) .demo__lesson---small:nth-child(2) {
+    padding-right: 56px;
+}
+
+.demo__col:nth-child(3) {
+    text-align: right;
+}
+
+.demo__lesson---small h2 {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #00a17f;
+    font-weight: 500;
+}
+
+.demo__lesson---small p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #333333;
+}
+
+.demo__lesson---large {
+    text-align: center;
+}
+
+.demo__lesson---large h2 {
+    font-size: 20px;
+    color: #00a17f;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.demo__lesson---large p {
+    font-size: 20px;
+    margin-top: 3px;
+    color: #00A17F;
+}
+
+.demo__image-container {
+  position: relative;
+}
+
+.demo__image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.demo__lesson---large:hover .demo__image-container::after {
+  visibility: visible;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(7px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+}
+
+.demo__image-container button{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .2s .1s;
+}
+
+.demo__lesson---large:hover button{
+  visibility: visible;
+  opacity: 1;
+}
