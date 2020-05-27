@@ -24,7 +24,7 @@
               </div>
               <div class="nav__list">
                 <li>
-                  <a href="#">
+                  <a href="#ecoacademy-part">
                     <img src="img/navigation/item1.png" alt="" />
                   </a>
                 </li>
@@ -157,6 +157,7 @@
                 <li>
                   <a href="#">
                     <img src="img/navigation/item5.png" alt="" />
+                    <div></div>
                   </a>
                 </li>
               </div>
@@ -292,6 +293,7 @@
                 <li>
                   <a href="#">
                     <img src="img/navigation/item5.png" alt="" />
+                    <div></div>
                   </a>
                 </li>
               </div>
@@ -396,6 +398,7 @@
                 <li>
                   <a href="#">
                     <img src="img/navigation/item5.png" alt="" />
+                    <div></div>
                   </a>
                 </li>
               </div>
@@ -435,6 +438,7 @@
                 <li>
                   <a href="#">
                     <img src="img/navigation/item5.png" alt="" />
+                    <div></div>
                   </a>
                 </li>
               </div>
@@ -586,6 +590,7 @@
                 <li>
                   <a href="#">
                     <img src="img/navigation/item5.png" alt="" />
+                    <div></div>
                   </a>
                 </li>
               </div>
@@ -706,6 +711,7 @@
                 <li>
                   <a href="#">
                     <img src="img/navigation/item5.png" alt="" />
+                    <div></div>
                   </a>
                 </li>
               </div>
@@ -896,6 +902,7 @@
                 <li>
                   <a href="#">
                     <img src="img/navigation/item5.png" alt="" />
+                    <div></div>
                   </a>
                 </li>
               </div>
@@ -1032,17 +1039,46 @@
       </section>
     </section>
 
-    <script src="js/common.js"></script>
-    <!-- 
-    <div class="popup-container">
+    <div class="popup-container" id="popup">
       <div class="popup__content">
         <form action=""></form>
+        <div class="cross" id="close-popup"></div>
       </div>
       <div class="darkener"></div>
-    </div> -->
+    </div>
 
+    <script src="js/common.js"></script>
+    <script></script>
     <script>
       var mySlider = slider(".slides");
+
+      const mainButton = document.querySelectorAll(".main-button");
+      const popup = document.querySelector("#popup");
+
+      const darkener = document.querySelector("#popup .darkener");
+      const closePopup = document.getElementById("close-popup");
+
+      for (let i = 0; i < mainButton.length; i++) {
+        mainButton[i].onclick = () => {
+          popup.classList.add("active");
+        };
+      }
+
+      darkener.onclick = () => {
+        popup.classList.remove("active");
+      };
+
+      closePopup.onclick = () => {
+        popup.classList.remove("active");
+      };
+
+      function keyPress(e) {
+        if (e.key === "Escape" && popup.classList.contains('active')) {
+          popup.classList.remove("active");
+        }
+      }
+
+      window.onkeydown = (e) => keyPress(e);
     </script>
   </body>
 </html>

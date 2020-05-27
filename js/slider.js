@@ -31,7 +31,13 @@ var slider = function (sliderElement) {
           }
         } else {
           console.log(hash);
+          if(hash === "#heading-part") {
+            const quotes__content = this.document.querySelector('.quotes__content-total');
+            quotes__content.classList.add('active');
+          }
           if (hash === "#quotes-part" && quotes === 1) {
+            const if__content = document.querySelector('.if__content-total');
+            if__content.classList.add('active');
             changeQuotesSlide(1);
             quotes++;
           } else {
