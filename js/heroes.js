@@ -33,7 +33,7 @@ function calcPageFillRadius(x, y) {
   return Math.sqrt(Math.pow(l, 2) + Math.pow(h, 2));
 }
 
-let imageLarge = 'worm';
+let imageLarge = "worm";
 let subImages = ["mermaid", "zero", "spider", "pigeon"];
 
 const changeImage = (i) => {
@@ -54,15 +54,19 @@ function addClickListeners() {
       changeImage(i);
     });
     subitems[i].addEventListener("mousedown", (e) => {
-        handleEvent(e);
-        changeImage(i);
-      });
+      handleEvent(e);
+      changeImage(i);
+    });
   }
   //   document.addEventListener("touchstart", handleEvent);
   //   document.addEventListener("mousedown", handleEvent);
 }
 
 function handleEvent(e) {
+  const whatis__main = document.querySelector(".whatis__main img");
+  const offTop = whatis__main.offsetTop + whatis__main.offsetHeight / 3;
+  const offLeft = whatis__main.offsetLeft + whatis__main.offsetWidth / 2;
+
   if (e.touches) {
     e.preventDefault();
     e = e.touches[0];
@@ -70,12 +74,12 @@ function handleEvent(e) {
   var currentColor = colorPicker.current();
   var nextColor = colorPicker.next();
   var targetR = calcPageFillRadius(e.pageX, e.pageY);
-  var rippleSize = Math.min(200, cW * 0.4);
+  var rippleSize = Math.min(400, cW * 0.4);
   var minCoverDuration = 750;
 
   var pageFill = new Circle({
-    x: e.pageX,
-    y: e.pageY,
+    x: offLeft,
+    y: offTop,
     r: 0,
     fill: nextColor,
   });
@@ -91,8 +95,10 @@ function handleEvent(e) {
   });
 
   var ripple = new Circle({
-    x: e.pageX,
-    y: e.pageY,
+    // x: e.pageX,
+    // y: e.pageY,
+    x: offLeft,
+    y: offTop,
     r: 0,
     fill: currentColor,
     stroke: {
@@ -113,10 +119,12 @@ function handleEvent(e) {
   var particles = [];
   for (var i = 0; i < 32; i++) {
     var particle = new Circle({
-      x: e.pageX,
-      y: e.pageY,
+      //   x: e.pageX,
+      //   y: e.pageY,
+      x: offLeft,
+      y: offTop,
       fill: currentColor,
-      r: anime.random(24, 48),
+      r: anime.random(50, 70),
     });
     particles.push(particle);
   }
