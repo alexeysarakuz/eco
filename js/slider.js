@@ -31,13 +31,15 @@ var slider = function (sliderElement) {
           }
         } else {
           console.log(hash);
-          if(hash === "#heading-part") {
-            const quotes__content = this.document.querySelector('.quotes__content-total');
-            quotes__content.classList.add('active');
+          if (hash === "#heading-part") {
+            const quotes__content = this.document.querySelector(
+              ".quotes__content-total"
+            );
+            quotes__content.classList.add("active");
           }
           if (hash === "#quotes-part" && quotes === 1) {
-            const if__content = document.querySelector('.if__content-total');
-            if__content.classList.add('active');
+            const if__content = document.querySelector(".if__content-total");
+            if__content.classList.add("active");
             changeQuotesSlide(1);
             quotes++;
           } else {
@@ -56,7 +58,7 @@ var slider = function (sliderElement) {
         const quotes__content = document.querySelector(
           ".quotes__content-total"
         );
-        console.log('123');
+        console.log("123");
 
         const quotes__figures = document.querySelector(".quotes__figures");
         const if__content = document.querySelector(".if__content-total");
@@ -66,7 +68,6 @@ var slider = function (sliderElement) {
         quotes__content.classList.add("swap");
         quotes__figures.classList.add("swap");
         if__content.classList.add("swap");
-        
       } else if (direction === -1) {
         const quotes__content = document.querySelector(
           ".quotes__content-total"
@@ -76,7 +77,7 @@ var slider = function (sliderElement) {
         quotes__content.classList.add("swap-back");
         quotes__figures.classList.add("swap-back");
         if__content.classList.add("swap-back");
-        
+
         setTimeout(() => {
           quotes__content.classList.remove("swap");
           quotes__figures.classList.remove("swap");
@@ -86,13 +87,13 @@ var slider = function (sliderElement) {
     };
 
     // allow keyboard input
-    window.addEventListener("keydown", function (e) {
-      if (keyUp[e.keyCode]) {
-        changeSlide(-1);
-      } else if (keyDown[e.keyCode]) {
-        changeSlide(1);
-      }
-    });
+    // window.addEventListener("keydown", function (e) {
+    //   if (keyUp[e.keyCode]) {
+    //     changeSlide(-1);
+    //   } else if (keyDown[e.keyCode]) {
+    //     changeSlide(1);
+    //   }
+    // });
 
     // page change animation is done
     detectChangeEnd() &&
@@ -135,38 +136,38 @@ var slider = function (sliderElement) {
       .classList.add("slider__indicator--active");
 
     // stuff for touch devices
-    var touchStartPos = 0;
-    var touchStopPos = 0;
-    var touchMinLength = 90;
-    document.addEventListener("touchstart", function (e) {
-      e.preventDefault();
-      if (
-        e.type == "touchstart" ||
-        e.type == "touchmove" ||
-        e.type == "touchend" ||
-        e.type == "touchcancel"
-      ) {
-        var touch = e.touches[0] || e.changedTouches[0];
-        touchStartPos = touch.pageY;
-      }
-    });
-    document.addEventListener("touchend", function (e) {
-      e.preventDefault();
-      if (
-        e.type == "touchstart" ||
-        e.type == "touchmove" ||
-        e.type == "touchend" ||
-        e.type == "touchcancel"
-      ) {
-        var touch = e.touches[0] || e.changedTouches[0];
-        touchStopPos = touch.pageY;
-      }
-      if (touchStartPos + touchMinLength < touchStopPos) {
-        changeSlide(-1);
-      } else if (touchStartPos > touchStopPos + touchMinLength) {
-        changeSlide(1);
-      }
-    });
+    // var touchStartPos = 0;
+    // var touchStopPos = 0;
+    // var touchMinLength = 90;
+    // document.addEventListener("touchstart", function (e) {
+    //   e.preventDefault();
+    //   if (
+    //     e.type == "touchstart" ||
+    //     e.type == "touchmove" ||
+    //     e.type == "touchend" ||
+    //     e.type == "touchcancel"
+    //   ) {
+    //     var touch = e.touches[0] || e.changedTouches[0];
+    //     touchStartPos = touch.pageY;
+    //   }
+    // });
+    // document.addEventListener("touchend", function (e) {
+    //   e.preventDefault();
+    //   if (
+    //     e.type == "touchstart" ||
+    //     e.type == "touchmove" ||
+    //     e.type == "touchend" ||
+    //     e.type == "touchcancel"
+    //   ) {
+    //     var touch = e.touches[0] || e.changedTouches[0];
+    //     touchStopPos = touch.pageY;
+    //   }
+    //   if (touchStartPos + touchMinLength < touchStopPos) {
+    //     changeSlide(-1);
+    //   } else if (touchStartPos > touchStopPos + touchMinLength) {
+    //     changeSlide(1);
+    //   }
+    // });
   };
 
   // prevent double scrolling
