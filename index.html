@@ -251,7 +251,9 @@
               </div>
             </div>
           </div>
-          <button class="main-button main-button---centered openpopup-trigger">
+          <button
+            class="main-button main-button---centered openpopup-trigger main-hover"
+          >
             Зареєструватись
           </button>
           <div class="if__background">
@@ -367,7 +369,7 @@
         </div>
       </section>
 
-      <section class="statistics-section" id="special-landing-slider">
+      <section class="statistics-section" id="statistics">
         <nav class="nav---white">
           <div class="nav-container nav-heading nav-container---long">
             <div class="nav__row">
@@ -403,6 +405,111 @@
             </div>
           </div>
         </nav>
+        <div class="statistics__content">
+          <img
+            src="img/statistics-section/title.png"
+            alt=""
+            class="statistics__title"
+          />
+          <img
+            src="img/statistics-section/subtitle.png"
+            alt=""
+            class="statistics__subtitle"
+          />
+          <div class="slider-container">
+            <div class="statistics__sliding">
+              <div class="slide">
+                <img
+                  src="img/statistics-section/garbage.png"
+                  alt=""
+                  class="statistics1__garbage"
+                />
+                <img
+                  src="img/statistics-section/ground.png"
+                  alt=""
+                  class="statistics1__ground"
+                />
+
+                <img
+                  src="img/statistics-section/garbage/4.png"
+                  alt=""
+                  class="statistics__garbage statistics__garbage4"
+                />
+                <img
+                  src="img/statistics-section/garbage/5.png"
+                  alt=""
+                  class="statistics__garbage statistics__garbage5"
+                />
+
+                <img
+                  src="img/statistics-section/garbage/3.png"
+                  alt=""
+                  class="statistics__garbage statistics__garbage3"
+                />
+                <img
+                  src="img/statistics-section/garbage/1.png"
+                  alt=""
+                  class="statistics__garbage statistics__garbage1"
+                />
+                <img
+                  src="img/statistics-section/garbage/2.png"
+                  alt=""
+                  class="statistics__garbage statistics__garbage2"
+                />
+
+                <div class="statistics__girl">
+                  <img
+                    src="img/statistics-section/girl.png"
+                    alt=""
+                    class="statistics__person"
+                  />
+                  <div class="statistics__cloud">
+                    <img src="img/statistics-section/speech/eyes1.png" alt="" />
+                    <p>
+                      В середньому <br />
+                      кожен виробляє
+                    </p>
+                    <h3>300 кг</h3>
+                    <h4>/ відходів</h4>
+                  </div>
+                </div>
+
+                <div class="statistics__boy">
+                  <img
+                    src="img/statistics-section/boy.png"
+                    alt=""
+                    class="statistics__person"
+                  />
+                  <div class="statistics__cloud">
+                    <img src="img/statistics-section/speech/eyes2.png" alt="" />
+                    <p>За 18 років це:</p>
+                    <div>
+                      <h5>5,4</h5>
+                      <h6>
+                        <b>тонни</b><br />
+                        сміття
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <img
+                  src="img/statistics-section/monster.png"
+                  alt=""
+                  class="statistics2__monster"
+                />
+              </div>
+              <div class="slide slide3">
+                <img
+                  src="img/statistics-section/ground2.png"
+                  alt=""
+                  class="statistics3__ground"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="faq-section temporary-hidden" id="questions-part">
@@ -1141,7 +1248,7 @@
       </div>
       <div class="darkener"></div>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/heroes.js"></script>
@@ -1188,24 +1295,24 @@
       for (let p = 0; p < recyclingBin.length; p++) {
         recyclingBin[p].onclick = () => {
           headingTrigger.classList.add("clicked");
-          thing1.classList.add('recycled');
-          thing2.classList.add('recycled');
-          thing3.classList.add('recycled');
-          thing4.classList.add('recycled');
-          thing5.classList.add('recycled');
-          thing6.classList.add('recycled');
-          thing7.classList.add('recycled');
+          thing1.classList.add("recycled");
+          thing2.classList.add("recycled");
+          thing3.classList.add("recycled");
+          thing4.classList.add("recycled");
+          thing5.classList.add("recycled");
+          thing6.classList.add("recycled");
+          thing7.classList.add("recycled");
         };
       }
 
       headingTrigger.onclick = () => {
-        thing1.classList.add('recycled');
-        thing2.classList.add('recycled');
-        thing3.classList.add('recycled');
-        thing4.classList.add('recycled');
-        thing5.classList.add('recycled');
-        thing6.classList.add('recycled');
-        thing7.classList.add('recycled');
+        thing1.classList.add("recycled");
+        thing2.classList.add("recycled");
+        thing3.classList.add("recycled");
+        thing4.classList.add("recycled");
+        thing5.classList.add("recycled");
+        thing6.classList.add("recycled");
+        thing7.classList.add("recycled");
 
         if (!headingTrigger.classList.contains("clicked")) {
           setTimeout(() => {

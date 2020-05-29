@@ -1,3 +1,6 @@
+let quotes = 1; //1 or 2
+let statistics = 1; //1 2 3
+
 var slider = function (sliderElement) {
   var pages = [];
   var currentSlide = 1;
@@ -6,7 +9,17 @@ var slider = function (sliderElement) {
   var keyDown = { 40: 1, 34: 1 };
   let allowScroll = true;
 
-  let quotes = 1; //1 or 2
+
+  const bgLeft = document.querySelector('.if__background---left');
+  const bgRight = document.querySelector('.if__background---right');
+  const styleElem = document.head.appendChild(document.createElement("style"));
+
+  const garbage_item1 = document.querySelector('.statistics__garbage1');
+  const garbage_item2 = document.querySelector('.statistics__garbage2');
+  const garbage_item3 = document.querySelector('.statistics__garbage3');
+  const garbage_item4 = document.querySelector('.statistics__garbage4');
+  const garbage_item5 = document.querySelector('.statistics__garbage5');
+  const garbage_item6 = document.querySelector('.statistics__garbage6');
 
   var init = function () {
     document.body.classList.add("slider__body");
@@ -25,7 +38,12 @@ var slider = function (sliderElement) {
         if (direction > 0) {
           if (hash === "#quotes-part" && quotes === 2) {
             changeQuotesSlide(-1);
+            const quotes__figure4 = document.querySelector(".quotes__figure4");
+            quotes__figure4.classList.remove("hidden");
             quotes--;
+          } else if (hash === "#statistics" && (statistics === 2 || statistics === 3)) {
+            statistics--;
+            changeStatisticsSlide(-1);
           } else {
             changeSlide(-1);
           }
@@ -37,11 +55,26 @@ var slider = function (sliderElement) {
             );
             quotes__content.classList.add("active");
           }
+          if (hash === '#ecoacademy-part') {
+            swapStatisticsGarbage(e);
+          }
           if (hash === "#quotes-part" && quotes === 1) {
             const if__content = document.querySelector(".if__content-total");
+            const quotes__figure4 = document.querySelector(".quotes__figure4");
             if__content.classList.add("active");
+            quotes__figure4.classList.add("hidden");
+            
             changeQuotesSlide(1);
+
+            const x = e.clientX/50;
+            const y = e.clientY/50;
+            bgLeft.style.transform = `translateY(${y}px) translateX(${x}px)`;
+            bgRight.style.transform = `translateY(-${y}px) translateX(-${x}px)`;
+            styleElem.innerHTML = `.quotes-section::after {transform: translateY(-${y}px) translateX(-${x}px)}`;
             quotes++;
+          } else if (hash === "#statistics" && (statistics === 1 || statistics === 2)) {
+            changeStatisticsSlide(1, statistics);
+            statistics++;
           } else {
             changeSlide(1);
           }
@@ -52,6 +85,17 @@ var slider = function (sliderElement) {
         }, 1400);
       }
     });
+
+    const changeStatisticsSlide = (direction) => {
+      if(direction === 1) {
+        const statistics__sliding = document.querySelector('.statistics__sliding');
+        statistics__sliding.style.transform = `translateX(-${statistics * 100}vw)`;
+      } else {
+
+        const statistics__sliding = document.querySelector('.statistics__sliding');
+        statistics__sliding.style.transform = `translateX(-${statistics * 100 - 100}vw)`;
+      }
+    }
 
     const changeQuotesSlide = (direction) => {
       if (direction === 1) {
@@ -251,7 +295,46 @@ var slider = function (sliderElement) {
   }
 
   // expose gotoSlide function
+
+  window.onmousemove = (e) => {
+    const hash = location.hash;
+    if (hash === "#quotes-part" && quotes === 2) {
+      const x = e.clientX/50;
+      const y = e.clientY/50;
+      bgLeft.style.transform = `translateY(${y}px) translateX(${x}px)`;
+      bgRight.style.transform = `translateY(-${y}px) translateX(-${x}px)`;
+      styleElem.innerHTML = `.quotes-section::after {transform: translateY(-${y}px) translateX(-${x}px)}`;
+    }
+
+    if (hash === "#statistics" && statistics === 1) {
+      swapStatisticsGarbage(e)
+    }
+  };
+
+
+
+  const swapStatisticsGarbage = (e) => {
+    const x = e.clientX/50;
+    const y = e.clientY/50;
+    
+    const x1 = e.clientX/30;
+    const y1 = e.clientY/20;
+
+    const x2 = e.clientX/10;
+    const y2 = e.clientX/10;
+
+    const x3 = e.clientX/100;
+    const y3 = e.clientX/10;
+
+    garbage_item1.style.transform = `translateY(${y2}px) translateX(${x1}px)`;
+    garbage_item2.style.transform = `translateY(-${y3}px) translateX(-${x3}px)`;
+    garbage_item3.style.transform = `translateY(-${y1}px) translateX(-${x2}px)`;
+    garbage_item4.style.transform = `translateY(${y}px) translateX(${x}px)`;
+  }
+
   return {
     gotoSlide: gotoSlide,
   };
+
+
 };

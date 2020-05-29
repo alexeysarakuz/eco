@@ -365,6 +365,14 @@ nav {
   cursor: pointer;
 }
 
+.heading__thing8_2:hover {
+  transform: rotate(30deg);
+}
+
+.heading__thing8:hover ~ .heading__thing8_2 {
+  transform: rotate(30deg);
+}
+
 .heading__thing8_2 {
   z-index: 100;
   width: 90px;
@@ -460,20 +468,36 @@ html body .if__content-total button.main-button.main-button---centered {
   margin-bottom: 40px;
 }
 
-.if__content-total.active .if__content-block:nth-child(1) {
+.main-hover {
+  transition: .3s;
+}
+
+.main-hover:hover {
+  transform: scale(1.05);
+}
+
+/* .if__content-total.active .if__content-block:nth-child(1) {
   animation: zoomout 0.3s 0.35s 1 forwards;
+  transform: scale(1.2);
+} */
+
+.if__content-block:hover {
+  transform: scale(1.1);
+}
+
+/* .if__content-total.active .if__content-block:nth-child(2) {
+  animation: zoomout 0.3s 0.45s 1 forwards;
   transform: scale(1.2);
 }
 
-.if__content-total.active .if__content-block:nth-child(2) {
-  animation: zoomout 0.3s 0.45s 1 forwards;
-  transform: scale(1.2);
+.if__content-total.active .if__content-block:nth-child(2):hover {
+  transform: scale(1.1);
 }
 
 .if__content-total.active .if__content-block:nth-child(3) {
   animation: zoomout 0.3s 0.55s 1 forwards;
   transform: scale(1.2);
-}
+} */
 
 @keyframes zoomout {
   0% {
@@ -563,6 +587,7 @@ html body .if__content-total button.main-button.main-button---centered {
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: .3s;
 }
 
 .quotes__item p {
@@ -607,6 +632,10 @@ html body .if__content-total button.main-button.main-button---centered {
   transform: translateY(96px);
 }
 
+.quotes__item1:hover {
+  transform: translateY(96px) scale(1.1);
+}
+
 .quotes__item1 p {
   width: 248px;
   margin-top: auto;
@@ -627,6 +656,10 @@ html body .if__content-total button.main-button.main-button---centered {
   min-height: 177px;
   background-size: cover;
   margin-left: 40px;
+}
+
+.quotes__item2:hover {
+  transform: scale(1.1);
 }
 
 .quotes__item2 p {
@@ -657,6 +690,10 @@ html body .if__content-total button.main-button.main-button---centered {
   background-size: cover;
   color: #fff;
   transform: translateY(205px) translateX(-30px);
+}
+
+.quotes__item3:hover {
+  transform: translateY(205px) translateX(-30px) scale(1.1);
 }
 
 .quotes__item3 img {
@@ -700,6 +737,12 @@ html body .if__content-total button.main-button.main-button---centered {
   /* height: 60px; */
   padding: 10px;
   transform: rotate(0);
+  opacity: 1;
+  transition: .3s;
+}
+
+.quotes__figure4.hidden {
+  opacity: 0;
 }
 
 .quotes__figure4 img {
@@ -799,16 +842,18 @@ html body .if__content-total button.main-button.main-button---centered {
 
 .if__background---left {
   position: absolute;
-  width: 268px;
-  left: 0;
+  width: 288px;
+  left: -30px;
   bottom: -3px;
+  transition: .2s;
 }
 
 .if__background---right {
   position: absolute;
-  width: 218px;
-  right: 0;
-  bottom: -3px;
+  width: 250px;
+  right: -50px;
+  bottom: -30px;
+  transition: .1s;
 }
 
 .team-section::after {
@@ -1359,8 +1404,8 @@ html body .if__content-total button.main-button.main-button---centered {
 .faq__dots {
   position: absolute;
   width: 287.07px;
-  bottom: 281px;
-  right: 166px;
+  bottom: 321px;
+  right: 150px;
   /* right: -330px; */
   /* bottom: -215px; */
 }

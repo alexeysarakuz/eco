@@ -1,27 +1,245 @@
-.statistics-section {
-    background-color: #8B55A0;
-    height: 100vh;
+.statistics-section nav {
+  position: absolute;
 }
 
-.statistics__sliding{
-    width: 300vw;
-    display: flex;
-    align-items: center;
+.statistics-section {
+  background-color: #b999c6;
+  height: 100vh;
+}
+
+.statistics__sliding {
+  width: 300vw;
+  display: flex;
+  align-items: center;
+  transition: .8s;
 }
 
 .slider-container {
-    max-width: 100%;
-    overflow: hidden;
+  max-width: 100%;
 }
 
 .statistics__sliding .slide {
-    width: 90vw;
-    min-height: 30px;
-    background-color: red;
-    margin: 10px 0;
+  width: 100vw;
+  min-height: 30px;
+  /* background-color: red; */
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
 }
 
 .statistics__sliding .slide:nth-child(2) {
+  /* background-color: green; */
+}
 
-    background-color: green;
+.statistics__title {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 468px;
+}
+
+.statistics__subtitle {
+  position: absolute;
+  top: 203px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 152px;
+}
+
+.statistics1__garbage {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  left: 0;
+}
+
+.statistics1__ground {
+  position: absolute;
+  left: 60px;
+  bottom: -50px;
+  width: 100%;
+  z-index: 8;
+}
+
+.statistics2__monster {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -100px;
+}
+
+.statistics3__ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.statistics-section .slide3 {
+  background-color: #57a080;
+}
+
+.statistics__garbage4 {
+  position: absolute;
+  width: 74px;
+  left: 52.05px;
+  bottom: 99px;
+}
+
+.statistics__garbage5 {
+  position: absolute;
+  width: 21px;
+  left: 172px;
+  bottom: 227px;
+}
+
+.statistics__garbage3 {
+  position: absolute;
+  width: 94px;
+  right: 121px;
+  bottom: 220px;
+}
+
+.statistics__garbage2 {
+  position: absolute;
+  width: 85px;
+  right: 69px;
+  top: 191px;
+}
+
+.statistics__garbage1 {
+  position: absolute;
+  width: 53.74px;
+  right: 69px;
+  bottom: 365px;
+}
+
+.statistics__girl {
+  width: 208px;
+  position: absolute;
+  z-index: 20;
+  bottom: 152px;
+  left: 413px;
+}
+
+.statistics__cloud:hover {
+    transform: scale(1.1);
+}
+
+.statistics__person {
+    transition: .3s;
+}
+
+.statistics__person:hover {
+    transform: scale(1.1);
+}
+
+.statistics__girl .statistics__cloud {
+  position: absolute;
+  width: 296px;
+  height: 254.82px;
+  background-image: url("../img/statistics-section/speech/girlspeech.png");
+  top: -230px;
+  left: -230px;
+}
+
+.statistics__boy .statistics__cloud {
+  position: absolute;
+  width: 283.02px;
+  height: 156.51px;
+  background-image: url("../img/statistics-section/speech/boyspeech.png");
+  top: -160px;
+  left: 90px;
+}
+
+.statistics__boy {
+  width: 100px;
+  position: absolute;
+  z-index: 20;
+  bottom: 146px;
+  left: 859px;
+  color: #ffffff;
+}
+
+.statistics__cloud {
+  position: absolute;
+  font-family: "Montserrat Alternates";
+  text-align: center;
+  background-repeat: no-repeat;
+  transition: .3s;
+}
+
+.statistics__cloud img {
+  position: absolute;
+}
+
+.statistics__girl .statistics__cloud img {
+  left: 74px;
+  top: 4px;
+  width: 65px;
+}
+
+.statistics__boy .statistics__cloud img {
+  left: 7px;
+  top: 0px;
+  width: 65px;
+}
+
+.statistics__cloud h3 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  color: #21379a;
+  margin-bottom: 5px;
+}
+
+.statistics__cloud h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+}
+
+.statistics__girl p {
+  margin-top: 74px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.statistics__boy p {
+  font-weight: 200;
+  font-size: 17px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-top: 22px;
+}
+
+.statistics__boy .statistics__cloud div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: 200;
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.statistics__boy .statistics__cloud div b {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.statistics__boy .statistics__cloud div h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    transform: translateY(-6px);
+    margin-right: 5px;
 }
