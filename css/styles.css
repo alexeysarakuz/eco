@@ -365,10 +365,6 @@ nav {
   cursor: pointer;
 }
 
-.heading__thing8:hover ~ .heading__thing8_2 {
-  transform: rotate(30deg);
-}
-
 .heading__thing8_2 {
   z-index: 100;
   width: 90px;
