@@ -1,0 +1,65 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./tools/serve.js",
+    "start:dev": "NODE_PATH=src SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "build": "NODE_PATH=src SKIP_PREFLIGHT_CHECK=true react-scripts build",
+    "test": "NODE_PATH=src SKIP_PREFLIGHT_CHECK=true react-scripts test"
+  },
+  "dependencies": {
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.10",
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4",
+    "axios": "^0.19.0",
+    "connected-react-router": "^6.5.0",
+    "express": "^4.17.1",
+    "history": "^4.9.0",
+    "ramda": "^0.26.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-frontload": "^1.1.0",
+    "react-helmet": "^5.2.1",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1",
+    "redux-axios-middleware": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.4",
+    "redux-thunk": "^2.3.0",
+    "serve-static": "^1.14.1",
+    "styled-components": "^4.3.2",
+    "styled-components-breakpoint": "^2.1.1",
+    "styled-reset": "^2.0.16",
+    "typescript": "3.5.2"
+  },
+  "devDependencies": {
+    "@types/history": "^4.7.2",
+    "@types/react-frontload": "^1.0.0",
+    "@types/react-helmet": "^5.0.8",
+    "@types/react-loadable": "^5.5.1",
+    "@types/react-redux": "^7.1.1",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/redux-logger": "^3.0.7",
+    "@types/redux-persist": "^4.3.1",
+    "@types/styled-components": "^4.1.16",
+    "@types/webpack-env": "^1.13.9"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+.dictionary__header {
+    display: flex;
+    width: 1324px;
+    justify-content: space-between;
+    margin: 0 0 94px 34px;
+}
+
+.dictionary__header-image {
+    width: 185px;
+    margin: 47px 0 0;
+}
+
+.dictionary__header-menu {
+    display: flex;
+    margin: 38px 0 0 0;
+    padding: 0;
+    width: 918px;
+    justify-content: space-between;
+}
+
+.dictionary__header-menu-item {
+    list-style: none;
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.dictionary__header-menu-item.active {
+    background: #FF5354;
+    border-radius: 50px;
+    padding: 5px 40px;
+    font-weight: bold;
+}
+
+.dictionary__header-menu-item.transparent {
+    opacity: 0.5;
+}
+
+.dictionary__header-menu-item a {
+    text-decoration: none;
+    color: #00A17F;
+}
+
+.dictionary__header-menu-item.active a {
+    color: #FFFFFF;
+}
+
+.dictionary__header-menu-item.main a {
+    color: #333333;
+}
+
+.dictionary__content-title {
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+    color: #FF5354;
+    margin: 0 0 51px;
+}
+
+.dictionary__content-paragraph {
+    max-width: 753px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 60px;
+}
+
+.dictionary__content-paragraph-term {
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    color: #00A17F;
+    width: 220px;
+    text-align: right;
+    margin: 0;
+}
+
+.dictionary__content-paragraph-text {
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333333;
+    width: 500px;
+    margin: 0;
+}
+
+.dictionary__content-substances {
+    margin: 82px auto 92px;
+    max-width: 1102px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dictionary__content-substance-box {
+    max-width: 300px;
+}
+
+.dictionary__content-substance-box img {
+    display: block;
+    margin: 0 auto;
+}
+
+.dictionary__content-substance-image-co2 {
+    width: 48px;
+}
+
+.dictionary__content-substance-image-ch4 {
+    width: 41px;
+}
+
+.dictionary__content-substance-image-n2o {
+    width: 77px;
+}
+
+.dictionary__content-substance-name {
+    font-family: Montserrat Alternates;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #323087;
+    margin: 11px 0 17px;
+}
+
+.dictionary__content-substance-info {
+    font-family: Montserrat Alternates;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #808080;
+    margin: 0;
+}
+
+.dictionary__footer-link {
+    text-decoration: none;
+    font-family: Montserrat Alternates;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #00A17F;
+}
+
+.dictionary__footer-arrow {
+    width: 55px;
+    vertical-align: bottom;
+    position: absolute;
+    right: 0;
+    top: 17px;
+}
+
+.dictionary__footer-block {
+    max-width: 250px;
+    margin: 0 auto 55px;
+    position: relative;
+}

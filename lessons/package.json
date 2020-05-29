@@ -1,0 +1,54 @@
+{
+  "name": "@unchartech/market-intelligence-web",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "web:start": "cd packages/web && yarn start",
+    "web:start:dev": "cd packages/web && yarn start:dev",
+    "web:build": "cd packages/web && yarn build",
+    "test": "cd packages/web && yarn test",
+    "lint": "yarn lint:js && yarn lint:styles && yarn lint:types && yarn lint:last-commit",
+    "lint:js": "eslint --ext .ts --ext .tsx packages",
+    "lint:styles": "stylelint './packages/**/*.tsx'",
+    "lint:types": "tsc",
+    "lint:last-commit": "commitlint -f HEAD~1",
+    "prettier": "prettier --write 'packages/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-jsdoc": "^8.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-ramda": "^2.5.1",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "typescript": "^3.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
