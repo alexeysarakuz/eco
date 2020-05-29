@@ -125,7 +125,7 @@
 }
 
 .statistics__garbage1 {
-  position: relative;
+  position: absolute;
   width: 53.74px;
   right: 69px;
   bottom: 365px;
